@@ -1,0 +1,22 @@
+login MobaXTerm CCAD - $ passwd
+
+tmux
+$ micromamba create -n jnb-env
+$ micromamba activate jnb-env
+$ jupyter notebook --no-browser --port=1234
+
+Run Tunneling port Forward localhost:3000 / Destination localhost:1234
+
+docker run -it \
+  -e PBF_URL=https://download.geofabrik.de/south-america/argentina-latest.osm.pbf \
+  -e REPLICATION_URL=https://download.geofabrik.de/south-america/argentina-updates/ \
+  -p 8080:8080 \
+  --name nominatim \
+  mediagis/nominatim:4.5
+
+# # #
+
+https://github.com/tyncho08/Using-GPU-Server-for-ML/blob/master/Using%20a%20GPU%20server%20for%20ML%20(with%20Keras).ipynb
+https://github.com/jipphysics/jupyter-ccad
+https://github.com/mediagis/nominatim-docker/tree/master/4.5
+

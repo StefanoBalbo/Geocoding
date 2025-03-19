@@ -2,7 +2,7 @@
 
 ![Geocoding Workflow](pic.jpg)  
 
-### 🚀 A parallelized geocoding workflow leveraging **Docker - Nominatim** and **Micromamba**, also applying libraries like **GeoPy** and **GeoPandas**, to convert textual addresses into geographic coordinates (lat, lon). Developed remotely on the CCAD-UNC (High-Performance Computing Center, National University of Cordoba) via SSH connection. Results and datasets may be hidden due to privacy policies.  
+### 🚀 A parallelized geocoding workflow leveraging **Docker - Nominatim** and **Micromamba** to convert textual addresses into geographic coordinates (lat, lon). Developed remotely on the CCAD-UNC (High-Performance Computing Center, National University of Cordoba) via SSH connection. Results and datasets may be hidden due to privacy policies.  
 -----------------------------------------------------------------------------------------------------------------------------------------------
 This repository is designed for assigining geographic coordinates into textual addresses. You are encouraged to: 
 - Adapt the workflow to your specific datasets, addresses and geographic regions.

@@ -17,7 +17,7 @@ http://localhost:1234/?token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 Use token link to log. Note: if you keep logged in the server, you can always use that same token-link.
 
-Then run Tunneling. Forward localhost:XXXX / Destination localhost:XXXX.
+Then run Tunneling. Forward localhost:3030 / Destination localhost:1234.
 
 Now we can set up the Docker:
 

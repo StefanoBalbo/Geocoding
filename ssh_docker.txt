@@ -1,3 +1,5 @@
+# # # Running the code in a Remote Server # # # 
+
 - First session - Login into server by SSH connection (CCAD-UNC) - Use MobaXTerm
 $ ssh <your_user>@<remote_server_address>
 $ passwd
@@ -26,9 +28,20 @@ docker run -it \
   --name nominatim \
   mediagis/nominatim:4.5
 
+Enjoy!
+
+
 # # # Suggested links # # #
 https://mobaxterm.mobatek.net/download.html
 https://github.com/tyncho08/Using-GPU-Server-for-ML/blob/master/Using%20a%20GPU%20server%20for%20ML%20(with%20Keras).ipynb
 https://github.com/jipphysics/jupyter-ccad
 https://github.com/mediagis/nominatim-docker/tree/master/4.5
 
+
+# # # For local install in Desktop PC # # #
+Download Docker Desktop. Start Docker Desktop. Open a terminal (PowerShell):
+
+docker pull mediagis/nominatim:4.5
+
+Now we can set up the Docker as mentioned before.
+Once the Docker is running, open a browser and navigate to: http://localhost:8080

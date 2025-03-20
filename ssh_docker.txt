@@ -1,11 +1,23 @@
-login MobaXTerm CCAD - $ passwd
+- First session - Login into server by SSH connection (CCAD-UNC) - Use MobaXTerm
+$ ssh <your_user>@<remote_server_address>
+$ passwd
 
-tmux
+- Second session - Install micromamba
+curl micro.mamba.pm/install.sh | bash
 $ micromamba create -n jnb-env
+
+- Third session - Activate jupyter
+tmux
 $ micromamba activate jnb-env
 $ jupyter notebook --no-browser --port=1234
 
-Run Tunneling port Forward localhost:3000 / Destination localhost:1234
+http://localhost:1234/?token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Use token link to log. Note: if you keep logged in the server, you can always use that same token-link.
+
+Then run Tunneling. Forward localhost:XXXX / Destination localhost:XXXX.
+
+Now we can set up the Docker:
 
 docker run -it \
   -e PBF_URL=https://download.geofabrik.de/south-america/argentina-latest.osm.pbf \
@@ -14,8 +26,8 @@ docker run -it \
   --name nominatim \
   mediagis/nominatim:4.5
 
-# # #
-
+# # # Suggested links # # #
+https://mobaxterm.mobatek.net/download.html
 https://github.com/tyncho08/Using-GPU-Server-for-ML/blob/master/Using%20a%20GPU%20server%20for%20ML%20(with%20Keras).ipynb
 https://github.com/jipphysics/jupyter-ccad
 https://github.com/mediagis/nominatim-docker/tree/master/4.5
